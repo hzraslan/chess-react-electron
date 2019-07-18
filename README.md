@@ -18,6 +18,7 @@ npm run electron-dev
 ```
 
 ##build 
-
+```
 npm run electron-pack
+```
 
