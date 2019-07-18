@@ -12,7 +12,10 @@ cd folder and npm install
 ```
 
 ## Usage
+
+```
 npm run electron-dev
+```
 
 ##build 
 
