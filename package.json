@@ -1,0 +1,108 @@
+{
+  "name": "chess-electron-react",
+  "version": "1.0.0",
+  "private": true,
+  "description": "chess desktop app",
+  "main": "public/electron.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/hzraslan/chess-react-electron.git"
+  },
+  "build": {
+    "appId": "com.hiziraslan.chess-electron-react",
+    "productName": "desktop-chess",
+    "copyright": "Copyright © 2019 Hizir Aslan",
+    "mac": {
+      "category": "public.app-category.utilities"
+    },
+    "files": [
+      "build/**/*",
+      "node_modules/**/*"
+    ],
+    "directories": {
+      "buildResources": "assets"
+    }
+  },
+  "author": {
+    "name": "Hizir Aslan",
+    "email": "hzraslan@gmail.com",
+    "url": "https://www.hiziraslan.com"
+  },
+  "rescripts": [
+    "env"
+  ],
+  "keywords": [
+    "chess",
+    "board",
+    "react",
+    "react-component",
+    "electron"
+  ],
+  "scripts": {
+    "start": "rescripts start",
+    "build": "npm run clean && npm run compile && NODE_ENV=production webpack -p && react-scripts build",
+    "clean": "rimraf build/ dist/ lib/ dist/*.js",
+    "compile": "babel --copy-files -d lib/ src/",
+    "test": "rescripts test",
+    "eject": "react-scripts eject",
+    "postinstall": "electron-builder install-app-deps",
+    "electron-pack": "npm run build -mw",
+    "electron-dev": "concurrently \"BROWSER=none npm run start\" \"wait-on http://localhost:3000 && electron .\""
+  },
+  "dependencies": {
+    "electron-is-dev": "^1.1.0",
+    "prop-types": "^15.7.2",
+    "react": "^16.8.6",
+    "react-dom": "^16.8.6",
+    "react-draggable": "^3.0.3",
+    "react-resize-aware": "2.7.0"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.5.0",
+    "@babel/core": "^7.5.4",
+    "@babel/preset-env": "^7.5.4",
+    "@babel/preset-react": "^7.0.0",
+    "@rescripts/cli": "0.0.11",
+    "@rescripts/rescript-env": "0.0.10",
+    "babel-loader": "8.0.5",
+    "concurrently": "^4.1.1",
+    "electron": "^5.0.6",
+    "electron-builder": "^21.0.15",
+    "eslint": "^5.16.0",
+    "eslint-config-prettier": "^6.0.0",
+    "eslint-config-sanity": "^0.141.5",
+    "eslint-plugin-react": "^7.14.2",
+    "jest": "24.7.1",
+    "prettier": "^1.18.2",
+    "react-addons-test-utils": "^15.6.2",
+    "react-scripts": "^3.0.1",
+    "react-test-renderer": "^16.8.6",
+    "rimraf": "^2.6.3",
+    "tslint": "^5.18.0",
+    "typescript": "^3.5.3",
+    "uglifyjs-webpack-plugin": "^2.1.3",
+    "wait-on": "^3.3.0",
+    "webpack": "4.29.6",
+    "webpack-cli": "^3.3.6"
+  },
+  "jest": {
+    "verbose": true,
+    "testEnvironment": "node",
+    "coverageDirectory": "coverage",
+    "collectCoverageFrom": [
+      "src/**.js"
+    ]
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  }
+}
