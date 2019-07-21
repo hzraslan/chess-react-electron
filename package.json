@@ -43,7 +43,7 @@
     "build": "npm run clean && npm run compile && NODE_ENV=production webpack -p && react-scripts build",
     "clean": "rimraf build/ dist/ lib/ dist/*.js",
     "compile": "babel --copy-files -d lib/ src/",
-    "test": "rescripts test",
+    "test": "react-scripts test",
     "eject": "react-scripts eject",
     "postinstall": "electron-builder install-app-deps",
     "electron-pack": "npm run build -mw",
