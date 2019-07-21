@@ -39,7 +39,7 @@
     "electron"
   ],
   "scripts": {
-    "start": "rescripts start",
+    "start": "react-scripts start",
     "build": "npm run clean && npm run compile && NODE_ENV=production webpack -p && react-scripts build",
     "clean": "rimraf build/ dist/ lib/ dist/*.js",
     "compile": "babel --copy-files -d lib/ src/",
@@ -62,8 +62,6 @@
     "@babel/core": "^7.5.4",
     "@babel/preset-env": "^7.5.4",
     "@babel/preset-react": "^7.0.0",
-    "@rescripts/cli": "0.0.11",
-    "@rescripts/rescript-env": "0.0.10",
     "babel-loader": "8.0.5",
     "concurrently": "^4.1.1",
     "electron": "^5.0.6",
@@ -75,7 +73,6 @@
     "jest": "24.7.1",
     "prettier": "^1.18.2",
     "react-addons-test-utils": "^15.6.2",
-    "react-scripts": "^3.0.1",
     "react-test-renderer": "^16.8.6",
     "rimraf": "^2.6.3",
     "tslint": "^5.18.0",

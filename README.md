@@ -17,7 +17,7 @@ cd folder and npm install
 npm run electron-dev
 ```
 
-##build 
+## build 
 ```
 npm run electron-pack
 ```
