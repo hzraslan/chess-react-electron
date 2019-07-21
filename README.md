@@ -8,7 +8,7 @@ Renders a chess board using React and electronJS
 ## dependencies install
 
 ```
-cd folder and npm install
+cd chess-electron-react && npm install
 ```
 
 ## Usage
