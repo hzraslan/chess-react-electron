@@ -65,7 +65,7 @@
     "babel-loader": "8.0.5",
     "concurrently": "^4.1.1",
     "electron": "^13.6.6",
-    "electron-builder": "^21.0.15",
+    "electron-builder": "^23.6.0",
     "eslint": "^5.16.0",
     "eslint-config-prettier": "^6.0.0",
     "eslint-config-sanity": "^0.141.5",
